@@ -24,6 +24,9 @@ jobs:
       apellidos: Garavito Valdivia
       edad: "22"
 
+      user: ${{secrets.USERNAME}}
+      password: ${{secrets.PASSWORD}}
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -49,5 +52,12 @@ jobs:
       # Step para los datos generales
       - name: Datos generales
         run: echo "carrera de ingeniería de sistemas"
+
+      # Step para variables de entorno de usuario y contraseña
+      - name: Mostrar variables de entorno secretas
+        run: |
+          echo "Usuario: ${{env.user}}"
+          echo "Contraseña: ${{env.password}}"
+        
 
 
