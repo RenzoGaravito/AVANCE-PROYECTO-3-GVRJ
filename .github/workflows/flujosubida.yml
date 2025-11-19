@@ -58,6 +58,10 @@ jobs:
         run: |
           echo "Usuario: ${{env.user}}"
           echo "Contraseña: ${{env.password}}"
-        
+      
+      # Step para variable abierta 
+      - name: Variable abierta
+        run: |
+          echo Variable abierta: ${{ vars.version_de_mi_proyecto }}
 
 
