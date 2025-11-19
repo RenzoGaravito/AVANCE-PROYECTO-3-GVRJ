@@ -23,7 +23,7 @@ jobs:
       nombres: Renzo José
       apellidos: Garavito Valdivia
       edad: "22"
-
+      version_de_mi_proyecto: "3.0"
       user: ${{secrets.USER}}
       password: ${{secrets.PASSWORD}}
 
@@ -63,5 +63,12 @@ jobs:
       - name: Variable abierta
         run: |
           echo Variable abierta: ${{ vars.version_de_mi_proyecto }}
-
+      
+      # Step para variables abierta 
+      - name: Variables abiertas 
+        run: |
+          echo "Version del proyecto: $version_de_mi_proyecto"
+          echo "Nombres: $nombres"
+          echo "Apellidos: $apellidos"
+          echo "Edad: $edad"*"
 
