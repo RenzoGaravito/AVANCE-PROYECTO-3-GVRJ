@@ -24,7 +24,7 @@ jobs:
       apellidos: Garavito Valdivia
       edad: "22"
 
-      user: ${{secrets.USERNAME}}
+      user: ${{secrets.USER}}
       password: ${{secrets.PASSWORD}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
